@@ -62,6 +62,40 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
     
   }
 ```
+## The append Implementation
+```swift
+  public func append(_ value: T) {
+    let newNode = Node(value: value)
+    if let lastNode = tail {
+      lastNode.next = newNode
+    } else {
+      head = newNode
+    }
+    tail = newNode
+  }
+```
+## The removeLast Implementation
+```swift 
+ public func removeLast() -> Node<T>?  {
+    guard !isEmpty else { return nil }
+    var removedNode: Node<T>?
+    if head == tail {
+      removedNode = head
+      head = nil
+      tail = nil
+    }
+    var currentNode = head
+    while currentNode != nil {
+      if currentNode?.next == tail {
+        removedNode = currentNode?.next
+        currentNode?.next = nil
+        tail = currentNode
+      }
+      currentNode = currentNode?.next
+    }
+    return removedNode
+  }
+```
 ## Finding the node at a specific index
 ```swift
  public func theNode(atIndex index: Int) -> Node<T> {
@@ -93,43 +127,6 @@ Subscripting was inpelemented to aid in displaying the titleLabels for the butto
     return node.value
   }
  ```
- 
-## The append Implementation
-```swift
-  public func append(_ value: T) {
-    let newNode = Node(value: value)
-    if let lastNode = tail {
-      lastNode.next = newNode
-    } else {
-      head = newNode
-    }
-    tail = newNode
-  }
-```
-
-## The removeLast Implementation
-```swift 
- public func removeLast() -> Node<T>?  {
-    guard !isEmpty else { return nil }
-    var removedNode: Node<T>?
-    if head == tail {
-      removedNode = head
-      head = nil
-      tail = nil
-    }
-    var currentNode = head
-    while currentNode != nil {
-      if currentNode?.next == tail {
-        removedNode = currentNode?.next
-        currentNode?.next = nil
-        tail = currentNode
-      }
-      currentNode = currentNode?.next
-    }
-    return removedNode
-  }
-```
-
 ## Demonstration
 
 ![gif](https://github.com/Ashlirankin18/VisualLinkListRepresentation/blob/master/LinkedList.gif)
