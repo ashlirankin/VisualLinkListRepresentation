@@ -35,6 +35,7 @@ public class Node<T: Equatable>: CustomStringConvertible, Equatable {
   init(value: T) {
     self.value = value
   }
+  
    public var isEmpty: Bool {
     return head == nil
   }
