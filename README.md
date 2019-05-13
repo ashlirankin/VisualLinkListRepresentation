@@ -1,4 +1,5 @@
-# VisualLinkListRepresentation
+# Visual LinkList Representation
+
 ## Why?
 
 Data Structures can be daunting. Sometimes reading the lines of code is not enough to understand the concept. If you are a visual learner like me, having a visual aid can really cement a concept. I created this small project to help individuals like me who need visual aids to hit the concept home. 
