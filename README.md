@@ -85,6 +85,8 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
 ```
 
 ## Subscripting LinkedList
+Subscripting was inpelemented to aid in displaying the titleLabels for the buttons in the collection view
+
 ```swift
   public subscript(index: Int) -> T {
     let node = theNode(atIndex: index)
