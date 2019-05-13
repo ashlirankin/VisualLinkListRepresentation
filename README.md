@@ -1,12 +1,19 @@
-# Visual LinkedList Representation
+# VisualLinkListRepresentation
 ## Why?
 
 Data Structures can be daunting. Sometimes reading the lines of code is not enough to understand the concept. If you are a visual learner like me, having a visual aid can really cement a concept. I created this small project to help individuals like me who need visual aids to hit the concept home. 
+
 ## How?
 
 The node class was implemented. It was then used to create the abstract LinkedList Data Structure with the append and remove last methods. Once the linkedlist was created two buttons were made, these buttons which trigger animations on the collection view cell. Combined these small parts stimulates the adding and removing nodes from the linked list. 
 
+## Why I am proud
+
+I am proud of this project because I was able to combine the concept of data structure and iOS architecture. Creating this linkedList visual model was challanging in terms of the architecture. Further, creating this project was rewarding because it allowed me to push myself further to create a product that would be of use to individuals other than me. In the further i want to build on this project and create other visual representations of data structures such as, Stacks, Queues, Binary Search Trees etc.
+
 ## Node Implementation
+
+A node is an abstract data type which contains a value and a pointer to another node. 
 
 ```swift
 public class Node<T: Equatable>: CustomStringConvertible, Equatable {
@@ -33,6 +40,9 @@ public class Node<T: Equatable>: CustomStringConvertible, Equatable {
 }
 ```
 ## Linkedlist Implementation
+
+A linked list is an abstract data structure which is comprised of a head and a tail. The head and tail are nodes and they are optional since they can be nil.
+
 ```swift
 public class LinkedList<T: Equatable>: CustomStringConvertible {
   public var head: Node<T>?
@@ -68,6 +78,9 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
   }
 ```
 ## The append Implementation
+
+The append method adds a node to the tail of the linked list.
+
 ```swift
   public func append(_ value: T) {
     let newNode = Node(value: value)
@@ -80,6 +93,9 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
   }
 ```
 ## The removeLast Implementation
+
+This method removes the node from the tail of the linked List
+
 ```swift 
  public func removeLast() -> Node<T>?  {
     guard !isEmpty else { return nil }
@@ -102,6 +118,9 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
   }
 ```
 ## Finding the node at a specific index
+
+This method finds a node at a specific index of the linkedList
+
 ```swift
  public func theNode(atIndex index: Int) -> Node<T> {
     if index == 0 {
@@ -110,7 +129,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
       var node = head!.next
       for _ in 1..<index {
         node = node?.next
-        if node == nil { //(*1)
+        if node == nil { 
           break
         }
       }
@@ -120,6 +139,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
 ```
 
 ## Subscripting LinkedList
+
 Subscripting was inpelemented to aid in displaying the titleLabels for the buttons in the collection view
 
 ```swift
