@@ -6,11 +6,12 @@ Data Structures can be daunting. Sometimes reading the lines of code is not enou
 
 ## How?
 
-The node class was implemented. It was then used to create the abstract LinkedList Data Structure with the append and remove last methods. Once the linkedlist was created two buttons were made, these buttons which trigger animations on the collection view cell. Combined these small parts stimulates the adding and removing nodes from the linked list. 
+The node class was implemented. It was then used to create the abstract LinkedList Data Structure with the append and remove last methods. Once the LinkedList was created two buttons were made, these buttons which trigger animations on the collection view cell. Combined these small parts stimulates the adding and removing nodes from the linked list. 
 
-## Why I am proud
+## Why I am Proud
 
-I am proud of this project because I was able to combine the concept of data structure and iOS architecture. Creating this linkedList visual model was challanging in terms of the architecture. Further, creating this project was rewarding because it allowed me to push myself further to create a product that would be of use to individuals other than me. In the further i want to build on this project and create other visual representations of data structures such as, Stacks, Queues, Binary Search Trees etc.
+I am proud of this project because I was able to combine the concepts of data structures and iOS architecture into a clean visual representation of LinkedList. Creating this project was rewarding because it allowed me to push myself further to create a product that would be of use to individuals other than me. In the further i want to build on this project and create other visual representations of data structures such as, Stacks, Queues, Binary Search Trees etc. 
+Moreover, I am proud of this project because I am passionate about helping other and making a meaningful impact in the live of the youth. It is my hope that this project aids persons who are interested in becoming developers or even youth students have a clear visualisation of data structures.
 
 ## Node Implementation
 
@@ -43,7 +44,7 @@ public class Node<T: Equatable>: CustomStringConvertible, Equatable {
 ```
 ## Linkedlist Implementation
 
-A linked list is an abstract data structure which is comprised of a head and a tail. The head and tail are nodes and they are optional since they can be nil.
+A LinkedList is an abstract data structure which is comprised of a head and a tail. The head and tail are nodes and they are optional since they can be nil.
 
 ```swift
 public class LinkedList<T: Equatable>: CustomStringConvertible {
@@ -81,7 +82,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
 ```
 ## The append Implementation
 
-The append method adds a node to the tail of the linked list.
+The append method adds a node to the tail of the LinkedList.
 
 ```swift
   public func append(_ value: T) {
@@ -96,7 +97,7 @@ The append method adds a node to the tail of the linked list.
 ```
 ## The removeLast Implementation
 
-This method removes the node from the tail of the linked List
+This method removes the node from the tail of the LinkedList
 
 ```swift 
  public func removeLast() -> Node<T>?  {
@@ -121,7 +122,7 @@ This method removes the node from the tail of the linked List
 ```
 ## Finding the node at a specific index
 
-This method finds a node at a specific index of the linkedList
+This method finds a node at a specific index of the LinkedList
 
 ```swift
  public func theNode(atIndex index: Int) -> Node<T> {
