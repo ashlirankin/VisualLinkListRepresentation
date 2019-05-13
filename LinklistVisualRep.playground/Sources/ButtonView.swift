@@ -2,52 +2,59 @@ import UIKit
 
 public class ButtonView:UIView {
  
-  public let pushButton:UIButton =  {
-    let button = UIButton(frame: CGRect(x: 0, y: 0, width: 90, height: 80))
+  public let appendButton:UIButton =  {
+    let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 80))
+    button.titleLabel?.numberOfLines = 0
+    button.setTitleColor(.black, for: .normal)
+
     button.setTitle("Append", for: .normal)
+     button.titleLabel?.font = UIFont(name: "Times", size: 11)
     button.setTitleColor(.black, for: .normal)
     return button
   }()
   
- public let popButton:UIButton = {
-    let button = UIButton(frame: CGRect(x: 0, y: 0, width: 90, height: 80))
-  button.setTitle("Pop", for: .normal)
-   button.setTitleColor(.black, for: .normal)
+ public let removeLastButton:UIButton = {
+    let button = UIButton(frame: CGRect(x: 0, y: 0, width: 180, height: 80))
+   button.titleLabel?.adjustsFontSizeToFitWidth = true
+  button.setTitle("RemoveLast", for: .normal)
+  button.titleLabel?.numberOfLines = 0
+  button.titleLabel?.font = UIFont(name: "Times", size: 11)
+  button.setTitleColor(.black, for: .normal)
     return button
   }()
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
-    addSubview(pushButton)
-    addSubview(popButton)
-    setupPopButton()
-    setupPushButton()
+    addSubview(appendButton)
+    addSubview(removeLastButton)
+    setupRemoveLastButton()
+    setupAppendButton()
   }
   public override func layoutSubviews() {
     super.layoutSubviews()
-    popButton.layer.cornerRadius = 10
-     popButton.layer.borderColor = #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
-    popButton.layer.borderWidth = 2
-    pushButton.layer.cornerRadius = 10
-    pushButton.layer.borderColor =  #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
-    pushButton.layer.borderWidth = 2
+    removeLastButton.layer.cornerRadius = 10
+     removeLastButton.layer.borderColor = #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
+    removeLastButton.layer.borderWidth = 2
+    appendButton.layer.cornerRadius = 10
+    appendButton.layer.borderColor =  #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
+    appendButton.layer.borderWidth = 2
   }
   
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func setupPushButton(){
-    pushButton.translatesAutoresizingMaskIntoConstraints = false
-    pushButton.topAnchor.constraint(equalTo: topAnchor).isActive = true
-    pushButton.widthAnchor.constraint(equalToConstant: 90).isActive = true
+  func setupAppendButton(){
+    appendButton.translatesAutoresizingMaskIntoConstraints = false
+    appendButton.topAnchor.constraint(equalTo: topAnchor).isActive = true
+    appendButton.widthAnchor.constraint(equalToConstant: 90).isActive = true
       
   }
   
-  func setupPopButton(){
-    popButton.translatesAutoresizingMaskIntoConstraints = false
-    popButton.leadingAnchor.constraint(equalTo: pushButton.trailingAnchor, constant: 10).isActive = true
-    popButton.widthAnchor.constraint(equalToConstant: 90).isActive = true
+  func setupRemoveLastButton(){
+    removeLastButton.translatesAutoresizingMaskIntoConstraints = false
+    removeLastButton.leadingAnchor.constraint(equalTo: appendButton.trailingAnchor, constant: 10).isActive = true
+    removeLastButton.widthAnchor.constraint(equalToConstant: 90).isActive = true
   }
   
   

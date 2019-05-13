@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
     layout.itemSize = CGSize(width: 100, height: 100)
-    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 30)
+    layout.sectionInset = UIEdgeInsets(top: 30, left: 50, bottom: 0, right: 50)
     let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     cv.backgroundColor = .white
     cv.register(CustomCell.self, forCellWithReuseIdentifier: "NodeCell")
@@ -41,13 +41,15 @@ class ViewController: UIViewController {
     super.viewWillLayoutSubviews()
     collectionView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)
     collectionView.center = view.center
+    collectionView.layer.borderWidth = 2
+    collectionView.layer.borderColor =  #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
   }
   func setUpButtonAction(){
-    buttonView.pushButton.addTarget(self, action: #selector(pushButtonPressed), for: .touchUpInside)
-    buttonView.popButton.addTarget(self, action: #selector(popButtonPressed), for: .touchUpInside)
+    buttonView.appendButton.addTarget(self, action: #selector(appendButtonPressed), for: .touchUpInside)
+    buttonView.removeLastButton.addTarget(self, action: #selector(removeLastButtonPressed), for: .touchUpInside)
   }
   
-  @objc func pushButtonPressed(){
+  @objc func appendButtonPressed(){
   linkList.append(Int.random(in: 0...100))
     let indexPath = IndexPath(item: linkList.count - 1, section: 0)
     collectionView.insertItems(at: [indexPath])
@@ -60,7 +62,7 @@ class ViewController: UIViewController {
       cell.alpha = 1
     })
   }
-  @objc func popButtonPressed(){
+  @objc func removeLastButtonPressed(){
     UIView.animate(withDuration: 1.0, delay: 0.2, options: [.beginFromCurrentState], animations: {
       self.linkList.removeLast()
       let indexPath = IndexPath(item: self.linkList.count , section: 0)

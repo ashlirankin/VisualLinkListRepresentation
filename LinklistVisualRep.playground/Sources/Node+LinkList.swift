@@ -60,7 +60,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
       var node = head!.next
       for _ in 1..<index {
         node = node?.next
-        if node == nil { //(*1)
+        if node == nil { 
           break
         }
       }
