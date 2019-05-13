@@ -61,8 +61,10 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
     }
     
   }
-  
-  public func theNode(atIndex index: Int) -> Node<T> {
+```
+## Finding the node at a specific index
+```swift
+ public func theNode(atIndex index: Int) -> Node<T> {
     if index == 0 {
       return head!
     } else {
@@ -76,14 +78,20 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
       return node!
     }
   }
-  public subscript(index: Int) -> T {
-    let node = theNode(atIndex: index)
-    return node.value
-  }
+
   public var isEmpty: Bool {
     return head == nil
   }
 ```
+
+## Subscripting LinkedList
+```swift
+  public subscript(index: Int) -> T {
+    let node = theNode(atIndex: index)
+    return node.value
+  }
+ ```
+ 
 ## The append Implementation
 ```swift
   public func append(_ value: T) {
@@ -96,6 +104,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
     tail = newNode
   }
 ```
+
 ## The removeLast Implementation
 ```swift 
  public func removeLast() -> Node<T>?  {
