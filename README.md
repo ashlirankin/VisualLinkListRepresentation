@@ -1,7 +1,6 @@
 # VisualLinkListRepresentation
 
-This playground project was created to give users a visual representation of the LinkedList data structure.
-Currently the application protrays the append and remove last methods of the link list. It is my intention to build on this and further include the other methods.
+Data Structures can be daunting. Sometimes reading the lines of code is not enough to understand the concept. If you are a visual learner like me, to really cement the concept. 
 
 # Demonstration
 
