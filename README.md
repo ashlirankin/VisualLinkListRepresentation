@@ -27,7 +27,98 @@ public class Node<T: Equatable>: CustomStringConvertible, Equatable {
   }
 }
 ```
+## Linkedlist Implementation
+```swift
+public class LinkedList<T: Equatable>: CustomStringConvertible {
+  public var head: Node<T>?
+  public var tail: Node<T>?
+  
+  public var description: String {
+    guard let head = head else { return "empty list" }
+    return "\(head)"
+  }
+  public init (){}
+  
+  public var first: Node<T>? {
+    return head
+  }
+  
+  public var last: Node<T>? {
+    return tail
+  }
+  
+  public var count: Int {
+    if head == nil {
+      return 0
+    } else {
+      var currentNode = head
+      var x = 1
+      while currentNode?.next != nil {
+        currentNode = currentNode?.next
+        x += 1
+      }
+      return x
+    }
+    
+  }
+  
+  public func theNode(atIndex index: Int) -> Node<T> {
+    if index == 0 {
+      return head!
+    } else {
+      var node = head!.next
+      for _ in 1..<index {
+        node = node?.next
+        if node == nil { //(*1)
+          break
+        }
+      }
+      return node!
+    }
+  }
+  public subscript(index: Int) -> T {
+    let node = theNode(atIndex: index)
+    return node.value
+  }
+  public var isEmpty: Bool {
+    return head == nil
+  }
+```
+## The append Implementation
+```swift
+  public func append(_ value: T) {
+    let newNode = Node(value: value)
+    if let lastNode = tail {
+      lastNode.next = newNode
+    } else {
+      head = newNode
+    }
+    tail = newNode
+  }
+```
+## The removeLast Implementation
+```swift 
+ public func removeLast() -> Node<T>?  {
+    guard !isEmpty else { return nil }
+    var removedNode: Node<T>?
+    if head == tail {
+      removedNode = head
+      head = nil
+      tail = nil
+    }
+    var currentNode = head
+    while currentNode != nil {
+      if currentNode?.next == tail {
+        removedNode = currentNode?.next
+        currentNode?.next = nil
+        tail = currentNode
+      }
+      currentNode = currentNode?.next
+    }
+    return removedNode
+  }
+```
 
-# Demonstration
+## Demonstration
 
 ![gif](https://github.com/Ashlirankin18/VisualLinkListRepresentation/blob/master/LinkedList.gif)
