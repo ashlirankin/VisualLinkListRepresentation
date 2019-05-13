@@ -5,4 +5,4 @@ Currently the application protrays the append and remove last methods of the lin
 
 # Demonstration
 
-![gif](https://github.com/Ashlirankin18/VisualLinkListRepresentation/blob/master/VisualLinkedList.gif)
+![gif](https://github.com/Ashlirankin18/VisualLinkListRepresentation/blob/master/LinkedList.gif)
