@@ -1,15 +1,6 @@
 import UIKit
 import PlaygroundSupport
 
-/*:
- ## Visual Linked List
- */
-
-/*:
- ## Implementation
- * generic can be used on any type
- */
-
 class ViewController: UIViewController {
   public var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
@@ -41,8 +32,8 @@ class ViewController: UIViewController {
     super.viewWillLayoutSubviews()
     collectionView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)
     collectionView.center = view.center
-    collectionView.layer.borderWidth = 2
-    collectionView.layer.borderColor =  #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
+  collectionView.layer.borderWidth = 2
+  collectionView.layer.borderColor =  #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
   }
   func setUpButtonAction(){
     buttonView.appendButton.addTarget(self, action: #selector(appendButtonPressed), for: .touchUpInside)
