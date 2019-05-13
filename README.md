@@ -1,6 +1,8 @@
 # VisualLinkListRepresentation
+## Why?
 
 Data Structures can be daunting. Sometimes reading the lines of code is not enough to understand the concept. If you are a visual learner like me, having a visual aid can really cement a concept. I created this small project to help individuals like me who need visual aids to hit the concept home. 
+## How?
 
 The node class was implemented. It was then used to create the abstract LinkedList Data Structure with the append and remove last methods. Once the linkedlist was created two buttons were made, these buttons which trigger animations on the collection view cell. Combined these small parts stimulates the adding and removing nodes from the linked list. 
 
