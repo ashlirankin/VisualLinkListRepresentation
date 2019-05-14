@@ -1,5 +1,4 @@
 import Foundation
-
 public class Node<T: Equatable>: CustomStringConvertible, Equatable {
   public var value: T
   public var next: Node?
