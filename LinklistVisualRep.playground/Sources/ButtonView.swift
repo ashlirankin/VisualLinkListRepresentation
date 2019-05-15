@@ -5,10 +5,9 @@ public class ButtonView:UIView {
     let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 80))
     button.titleLabel?.numberOfLines = 0
     button.setTitleColor(.black, for: .normal)
-
     button.setTitle("Append", for: .normal)
-     button.titleLabel?.font = UIFont(name: "Times", size: 11)
-    button.setTitleColor(.black, for: .normal)
+     button.titleLabel?.font = UIFont(name: "Chalkduster", size: 12)
+    button.setTitleColor(.orange, for: .normal)
     return button
   }()
   
@@ -17,8 +16,8 @@ public class ButtonView:UIView {
    button.titleLabel?.adjustsFontSizeToFitWidth = true
   button.setTitle("RemoveLast", for: .normal)
   button.titleLabel?.numberOfLines = 0
-  button.titleLabel?.font = UIFont(name: "Times", size: 11)
-  button.setTitleColor(.black, for: .normal)
+  button.titleLabel?.font = UIFont(name: "Chalkduster", size: 12)
+  button.setTitleColor(.orange, for: .normal)
     return button
   }()
   
@@ -31,8 +30,11 @@ public class ButtonView:UIView {
   }
   public override func layoutSubviews() {
     super.layoutSubviews()
+    setupButtons()
+  }
+  func setupButtons(){
     removeLastButton.layer.cornerRadius = 10
-     removeLastButton.layer.borderColor = #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
+    removeLastButton.layer.borderColor = #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
     removeLastButton.layer.borderWidth = 2
     appendButton.layer.cornerRadius = 10
     appendButton.layer.borderColor =  #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor

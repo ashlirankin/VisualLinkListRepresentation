@@ -47,10 +47,12 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
       return node!
     }
   }
+  
   public subscript(index: Int) -> T {
     let node = theNode(atIndex: index)
     return node.value
   }
+  
   public var isEmpty: Bool {
     return head == nil
   }
