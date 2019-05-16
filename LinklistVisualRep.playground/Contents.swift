@@ -35,7 +35,7 @@ class ViewController: UIViewController {
       self.linkedListCV.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
       guard let cell = self.linkedListCV.collectionView.cellForItem(at: indexPath) else {return}
       cell.layer.borderColor = UIColor.orange.cgColor
-      cell.transform = CGAffineTransform(translationX: 8, y: -51)
+      cell.transform = CGAffineTransform(translationX: 8, y: -50)
     })
   }
   @objc func removeLastButtonPressed(){

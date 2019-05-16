@@ -6,7 +6,7 @@ open class LinkedListCV:UIView {
     label.backgroundColor = .white
     label.font = UIFont(name: "Chalkduster", size: 40)
     label.textColor = .orange
-    label.text = "The Linked List"
+    label.text = "Linked List"
     label.textAlignment = .center
     return label
   }()
