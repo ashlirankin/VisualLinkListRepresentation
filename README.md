@@ -44,7 +44,7 @@ public class Node<T: Equatable>: CustomStringConvertible, Equatable {
 ```
 ## Linkedlist Implementation
 
-A LinkedList is an abstract data structure which is comprised of a head and a tail. The head and tail are nodes and they are optional since they can be nil.
+A LinkedList is an abstract data structure which is comprised of a head and a tail. The head points to the beginning of the list and tail points to the end.
 
 ```swift
 public class LinkedList<T: Equatable>: CustomStringConvertible {
