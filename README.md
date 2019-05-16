@@ -153,4 +153,4 @@ Subscripting was inpelemented to aid in displaying the titleLabels for the butto
  ```
 ## Demonstration
 
-![gif](https://github.com/Ashlirankin18/VisualLinkListRepresentation/blob/master/newLinkedlist.gif)
+![gif](https://github.com/Ashlirankin18/VisualLinkListRepresentation/blob/master/linkedListRedone.gif)
