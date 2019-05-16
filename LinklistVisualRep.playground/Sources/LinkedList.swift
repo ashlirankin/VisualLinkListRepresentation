@@ -67,6 +67,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
     tail = newNode
   }
   
+  @discardableResult
   public func removeLast() -> Node<T>?  {
     guard !isEmpty else { return nil }
     var removedNode: Node<T>?

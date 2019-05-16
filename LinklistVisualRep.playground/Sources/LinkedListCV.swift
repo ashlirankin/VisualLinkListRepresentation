@@ -36,8 +36,6 @@ open class LinkedListCV:UIView {
     super.layoutSubviews()
     collectionView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 200)
     collectionView.center = center
-    collectionView.layer.borderWidth = 2
-    collectionView.layer.borderColor =  UIColor.black.cgColor
     titleLabel.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 54)
     
   }
