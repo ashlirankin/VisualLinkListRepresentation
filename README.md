@@ -10,8 +10,8 @@ The node class was implemented. It was then used to create the abstract LinkedLi
 
 ## Why I am Proud
 
-I am proud of this project because I was able to combine the concepts of data structures and iOS architecture into a clean visual representation of LinkedList. Creating this project was rewarding because it allowed me to push myself further to create a product that would be of use to individuals other than me. In the further i want to build on this project and create other visual representations of data structures such as, Stacks, Queues, Binary Search Trees etc. 
-Moreover, I am proud of this project because I am passionate about helping other and making a meaningful impact in the live of the youth. It is my hope that this project aids persons who are interested in becoming developers or even youth students have a clear visualisation of data structures.
+I am proud of this project because I was able to combine the concepts of data structures and iOS architecture into a clean visual representation of LinkedList. Creating this project was rewarding because it allowed me to push myself further to create a product that would be of use to individuals other than me. In the furture I want to build on this project and create visual representations of other abstract data structures such as, Stacks, Queues, Binary Search Trees etc. 
+Moreover, I am proud of this project because I am passionate about helping others and creating a meaningful impact in the lives of the youth.
 
 ## Node Implementation
 
