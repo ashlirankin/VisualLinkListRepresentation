@@ -1,6 +1,6 @@
 import UIKit
 
-open class LinkedListCV:UIView {
+public class LinkedListCV:UIView {
   
   public var titleLabel:UILabel = {
     let label = UILabel(frame: CGRect.zero)
@@ -29,7 +29,7 @@ open class LinkedListCV:UIView {
     addSubview(collectionView)
   }
   
- public required init?(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
@@ -41,7 +41,7 @@ open class LinkedListCV:UIView {
     
   }
   
-  func setupTitleLabel(){
+  public func setupTitleLabel(){
    addSubview(titleLabel)
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
       titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true

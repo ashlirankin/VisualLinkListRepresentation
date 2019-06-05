@@ -8,6 +8,7 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
     guard let head = head else { return "empty list" }
     return "\(head)"
   }
+  
   public init (){}
   
   public var first: Node<T>? {

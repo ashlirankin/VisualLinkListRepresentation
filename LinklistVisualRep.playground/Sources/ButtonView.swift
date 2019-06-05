@@ -1,6 +1,7 @@
 import UIKit
 
 public class ButtonView:UIView {
+  
   public let appendButton:UIButton =  {
     let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 80))
     button.titleLabel?.numberOfLines = 0
