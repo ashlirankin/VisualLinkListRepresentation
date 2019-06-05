@@ -28,11 +28,13 @@ public class ButtonView:UIView {
     setupRemoveLastButton()
     setupAppendButton()
   }
+  
   public override func layoutSubviews() {
     super.layoutSubviews()
     setupButtons()
   }
-  func setupButtons(){
+  
+  private func setupButtons(){
     removeLastButton.layer.cornerRadius = 10
     removeLastButton.layer.borderColor = #colorLiteral(red: 0.6870860457, green: 0.8867294192, blue: 1, alpha: 1).cgColor
     removeLastButton.layer.borderWidth = 2
@@ -45,14 +47,13 @@ public class ButtonView:UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func setupAppendButton(){
+  private func setupAppendButton(){
     appendButton.translatesAutoresizingMaskIntoConstraints = false
     appendButton.topAnchor.constraint(equalTo: topAnchor).isActive = true
     appendButton.widthAnchor.constraint(equalToConstant: 90).isActive = true
-      
   }
   
-  func setupRemoveLastButton(){
+  private func setupRemoveLastButton(){
     removeLastButton.translatesAutoresizingMaskIntoConstraints = false
     removeLastButton.leadingAnchor.constraint(equalTo: appendButton.trailingAnchor, constant: 10).isActive = true
     removeLastButton.widthAnchor.constraint(equalToConstant: 90).isActive = true

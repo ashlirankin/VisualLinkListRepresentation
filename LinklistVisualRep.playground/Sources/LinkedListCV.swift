@@ -1,6 +1,7 @@
 import UIKit
 
 open class LinkedListCV:UIView {
+  
   public var titleLabel:UILabel = {
     let label = UILabel(frame: CGRect.zero)
     label.backgroundColor = .white
@@ -10,6 +11,7 @@ open class LinkedListCV:UIView {
     label.textAlignment = .center
     return label
   }()
+  
   public var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
@@ -24,8 +26,7 @@ open class LinkedListCV:UIView {
   public override init(frame: CGRect) {
     super.init(frame: frame)
     setupTitleLabel()
-    
-  addSubview(collectionView)
+    addSubview(collectionView)
   }
   
  public required init?(coder aDecoder: NSCoder) {
@@ -39,6 +40,7 @@ open class LinkedListCV:UIView {
     titleLabel.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 54)
     
   }
+  
   func setupTitleLabel(){
    addSubview(titleLabel)
     titleLabel.translatesAutoresizingMaskIntoConstraints = false

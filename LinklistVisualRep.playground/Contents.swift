@@ -37,8 +37,8 @@ public class ViewController: UIViewController {
       cell.transform = CGAffineTransform(translationX: 8, y: -50)
     })
   }
+  
   @objc public func removeLastButtonPressed(){
-    
     UIView.animate(withDuration: 0.9, animations: {
       self.linkList.removeLast()
       let indexPath = IndexPath(item: self.linkList.count , section: 0)
@@ -49,10 +49,11 @@ public class ViewController: UIViewController {
   }
 }
 extension ViewController: UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+  
   public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    
     return linkList.count
   }
+  
   public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = linkedListCV.collectionView.dequeueReusableCell(withReuseIdentifier: "NodeCell", for: indexPath) as! CustomCell
     cell.layer.cornerRadius = cell.bounds.width / 2.0

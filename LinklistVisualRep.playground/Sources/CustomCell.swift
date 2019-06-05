@@ -32,6 +32,7 @@ public class CustomCell: UICollectionViewCell{
     setupChevron()
     setupLineView()
   }
+  
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -45,12 +46,14 @@ public class CustomCell: UICollectionViewCell{
     dataButton.layer.cornerRadius = dataButton.bounds.width / 2.0
     dataButton.layer.masksToBounds = true
   }
+  
   private func setupChevron() {
     addSubview(chevron)
     chevron.translatesAutoresizingMaskIntoConstraints = false
     chevron.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     chevron.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
   }
+  
   private func setupLineView() {
     addSubview(lineView)
     lineView.translatesAutoresizingMaskIntoConstraints = false

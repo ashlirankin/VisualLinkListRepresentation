@@ -30,7 +30,6 @@ public class LinkedList<T: Equatable>: CustomStringConvertible {
       }
       return x
     }
-    
   }
   
   public func theNode(atIndex index: Int) -> Node<T> {
